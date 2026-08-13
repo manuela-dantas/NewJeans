@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-def index(request):
+def inicio(request):
     return render(request, 'index.html')
 
 

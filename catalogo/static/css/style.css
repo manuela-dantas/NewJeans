@@ -1,11 +1,10 @@
 #carouselExampleCaptions {
-    max-width: 650px;
+    width: 550px;
     margin: 0 auto;
-    width: 100px;
-    height: 220px;
 }
 
 #carouselExampleCaptions .carousel-item img {
-    height: 250px;
+    width: 550px;
+    height: 220px;
     object-fit: cover;
 }
