@@ -42,33 +42,32 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#inicio">
+                    <a class="nav-link " href="{% url 'inicio' %}">
                         Início
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#produtos">
+                    <a class="nav-link" href="{% url 'produtos' %}">
                         Produtos
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#categorias">
+                    <a class="nav-link" href="{% url 'categorias' %}">
                         Categorias
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#sobre">
+                    <a class="nav-link" href="{% url 'sobre' %}">
                         Sobre nós
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#contato">
-                        Contato
-                    </a>
+                    <a class="nav-link" href="{% url 'contato' %}">
+                        Contato</a>
                 </li>
 
             </ul>
@@ -597,7 +596,7 @@
 
             <div class="col-lg-6">
 
-                <img src="{% static 'img/loja.jpg' %}"
+                <img src="{% static 'img/logo002.png' %}"
                     class="img-fluid rounded shadow"
                     alt="Loja New Jeans">
 

@@ -1,0 +1,523 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | New Jeans</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold fs-3" href="{% url 'inicio' %}">
+            NEW <span class="text-primary">JEANS</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">
+                        Início
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'produtos' %}">
+                        Produtos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'categorias' %}">
+                        Categorias
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sobre' %}">
+                        Sobre nós
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contato' %}">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-primary ms-lg-3">
+                <i class="bi bi-cart3"></i>
+                Carrinho
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- TÍTULO -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h1 class="fw-bold">
+                Nossos produtos
+            </h1>
+
+            <p class="text-muted">
+                Encontre consoles, jogos, HQs, vestuario e colecionáveis.
+            </p>
+
+        </div>
+
+        <!-- FILTROS -->
+
+        <div class="text-center mb-4">
+
+            <a href="#" class="btn btn-outline-primary me-2">
+                Todos
+            </a>
+
+            <a href="#" class="btn btn-outline-primary me-2">
+                Consoles
+            </a>
+
+            <a href="#" class="btn btn-outline-primary me-2">
+                Jogos
+            </a>
+
+            <a href="#" class="btn btn-outline-primary me-2">
+                HQs
+            </a>
+
+            <a href="#" class="btn btn-outline-primary">
+                Vestuario
+            </a>
+
+        </div>
+
+        <!-- PRODUTOS -->
+
+        <div class="row g-4">
+
+            <!-- PRODUTO 1 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/ps5.jpg' %}"
+                        class="card-img-top"
+                        alt="PlayStation 5">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-primary">
+                            Console
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            PlayStation 5
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Console de nova geração para seus jogos favoritos.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 3.999,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 2 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/jogos.jpg' %}"
+                        class="card-img-top"
+                        alt="Jogo">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-success">
+                            Jogo
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Game Adventure
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Uma aventura para explorar novos mundos.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 209,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 3 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/hqcomicsmarvel.jpg' %}"
+                        class="card-img-top"
+                        alt="HQ Marvel">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-danger">
+                            HQ
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            HQ Marvel
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Edição especial para fãs e colecionadores.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 89,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 4 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/camisamarceline.jpg' %}"
+                        class="card-img-top"
+                        alt="Camiseta Marceline">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark">
+                            Vestuario
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Camiseta Marceline
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Camiseta inspirada em Hora de Aventura.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 79,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 5 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/readdeadredemption.jpg' %}"
+                        class="card-img-top"
+                        alt="Red Dead Redemption 2">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark">
+                            Vestuario
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Red Dead Redemption 2
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Camisa Red Dead Redemption 2, com estampa de alta qualidade e tecido confortável.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 59,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 6 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/camisaspiderman.jpg' %}"
+                        class="card-img-top"
+                        alt="Camiseta Spider-Man">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark">
+                            Vestuario
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Camiseta Spider-Man
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Camiseta inspirada no herói favorito dos fãs da Marvel, Spider-Man.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 79,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 7 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/ps3.jpg' %}"
+                        class="card-img-top"
+                        alt="PlayStation 3">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-primary">
+                            Console
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            PlayStation 3
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Console clássico para reviver grandes jogos.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 699,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 8 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="{% static 'img/funko.jpg' %}"
+                        class="card-img-top"
+                        alt="Funko Pop Goku">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark">
+                            Bonecos
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Funko Pop! - Goku
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Boneco colecionável do Goku da série Dragon Ball.
+                        </p>
+
+                        <h4 class="text-primary">
+                            R$ 119,90
+                        </h4>
+
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-cart-plus"></i>
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="bg-black text-white py-4">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h5 class="fw-bold">
+                    NEW <span class="text-primary">JEANS</span>
+                </h5>
+
+                <p class="mb-0 text-secondary">
+                    Seu universo geek em um só lugar.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <a href="#" class="text-white fs-4 me-3">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4 me-3">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4 me-3">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center text-secondary">
+
+            <small>
+                © 2026 New Jeans. Todos os direitos reservados.
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
